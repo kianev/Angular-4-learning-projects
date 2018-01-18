@@ -1,0 +1,57 @@
+<p>
+  component9 works!
+</p>
+<!--<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">
+      {{ user }}
+    </li>
+  </ul>
+  <hr>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let d of data">
+      {{ d }}
+    </li>
+  </ul>
+</div>-->
+
+<div class="container">
+  <form (submit)="onsubmit(editMode)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="form-control" [(ngModel)]="user.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" [(ngModel)]="user.email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" class="form-control" [(ngModel)]="user.phone" name="phone">
+    </div>
+    <input type="submit" value="Submit" class="btn btn-success">
+  </form>
+</div>
+
+<hr>
+<div class="container">
+  <div *ngFor="let user of usersJSON">
+    <div class="well">
+      <ul class="list-group">
+        <li class="list-group-item">
+          Name: {{ user.name }}
+        </li>
+        <li class="list-group-item">
+          Email: {{ user.email }}
+        </li>
+        <li class="list-group-item">
+          Phone: {{ user.phone }}
+        </li>
+      </ul>
+      <button class="btn btn-primary btn-sm" (click)="onEdit(user)">Edit</button>
+      <button class="btn btn-danger btn-sm" (click)="onDelete(user.id)">Delete</button>
+    </div>
+  </div>
+
+</div>
+

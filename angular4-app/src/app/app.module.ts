@@ -16,6 +16,9 @@ import { EventsComponent } from './components/events/events.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { FormSubmitionComponent } from './components/form-submition/form-submition.component';
 import { TemplateDrivenValidComponent } from './components/template-driven-valid/template-driven-valid.component';
+import {DataService} from './components/services/data.service';
+import { Component9Component } from './components/component9/component9.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,13 +35,15 @@ import { TemplateDrivenValidComponent } from './components/template-driven-valid
     EventsComponent,
     TwoWayBindingComponent,
     FormSubmitionComponent,
-    TemplateDrivenValidComponent
+    TemplateDrivenValidComponent,
+    Component9Component
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
