@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SandboxComponent } from './components/component1/sandbox.component';
@@ -11,6 +12,10 @@ import { Component5Component } from './components/component5/component5.componen
 import { Component6Component } from './components/component6/component6.component';
 import { Component7Component } from './components/component7/component7.component';
 import { Component8Component } from './components/component8/component8.component';
+import { EventsComponent } from './components/events/events.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { FormSubmitionComponent } from './components/form-submition/form-submition.component';
+import { TemplateDrivenValidComponent } from './components/template-driven-valid/template-driven-valid.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +28,15 @@ import { Component8Component } from './components/component8/component8.componen
     Component5Component,
     Component6Component,
     Component7Component,
-    Component8Component
+    Component8Component,
+    EventsComponent,
+    TwoWayBindingComponent,
+    FormSubmitionComponent,
+    TemplateDrivenValidComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

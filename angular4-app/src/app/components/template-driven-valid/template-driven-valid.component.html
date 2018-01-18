@@ -1,0 +1,22 @@
+<p>
+  template-driven-valid works!
+</p>
+<div class="container">
+  <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="form-control" [(ngModel)]="user.name" name="name" #userName="ngModel" required>
+      <div *ngIf="userName.errors?.required && userName.touched" class="alert alert-danger">Name is required!</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" [(ngModel)]="user.email" name="email" #userEmail="ngModel" required>
+      <div *ngIf="userEmail.errors?.required && userName.touched" class="alert alert-danger">Name is required!</div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" class="form-control" [(ngModel)]="user.phone" name="phone" #userPhone="ngModel">
+    </div>
+    <input type="submit" value="Submit" class="btn btn-success">
+  </form>
+</div>
